@@ -14,11 +14,11 @@ const presets = [
   ["Basslinien","🎵","G2-A3","staff-note",1],["Bass-Oktave","🌙","C3-C4","mixed",2],
   ["Bass-Hilfslinien","🌲","F2-C4","mixed",3],["Zwei Schlüssel","🌟","C3-C5","mixed",2],
   ["Zwei Oktaven","🎨","C3-C5","mixed",3],  ["Kreuz-Sterne","⭐","C4-C5","staff-piano",3,"sharps"],
-  ["B-Wald","🍃","F3-C4","staff-note",2],["Großes Klavier","🎹","C3-C5","mixed",3],
-  ["Meisterabenteuer","🏆","C3-C5","mixed",3],["Schnelle Fünf","⚡","C4-C5","staff-note",1],
-  ["Klavierforscher","🎹","C3-C5","staff-piano",2],
-  ["Tasten-Noten","🎹","C4-C5","piano-note",1],["Vom Klavier zur Notenzeile","🎼","C3-C5","piano-staff",2],
-  ["b-Wiesen","🍀","C4-C5","staff-note",3,"flats"],["Vorzeichen-Meister","🎼","C3-C5","mixed",3,"both"]
+  ["B-Wald","🍃","A3-C4","staff-note",2],["Großes Klavier","🎹","A3-C5","mixed",3],
+  ["Meisterabenteuer","🏆","A3-C5","mixed",3],["Schnelle Fünf","⚡","C4-C5","staff-note",1],
+  ["Klavierforscher","🎹","A3-C5","staff-piano",2],
+  ["Tasten-Noten","🎹","C4-C5","piano-note",1],["Vom Klavier zur Notenzeile","🎼","A3-C5","piano-staff",2],
+  ["b-Wiesen","🍀","C4-C5","staff-note",3,"flats"],["Vorzeichen-Meister","🎼","A3-C5","mixed",3,"both"]
 ].map((p,i)=>({id:"built-"+i,name:p[0],icon:p[1],range:p[2],type:p[3],difficulty:p[4],accidentalMode:p[5]||"natural",builtIn:true}));
 presets.forEach((preset,index)=>{
   preset.clef = index >= 5 && index <= 8 ? "bass" : index === 9 || index === 10 ? "both" : "treble";
